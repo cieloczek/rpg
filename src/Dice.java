@@ -1,0 +1,26 @@
+import java.util.concurrent.ThreadLocalRandom;
+
+public class Dice {
+    private int numOfDices;
+    private int diceType;
+    private String dice;
+
+    public Dice(String dice) {
+        this.dice = dice;
+        String[] temp = dice.split("k");
+        this.numOfDices = Integer.parseInt(temp[0]);
+        this.diceType = Integer.parseInt(temp[1]);
+    }
+    public int roll(){
+        int result = 0;
+        int cumulatedResult = 0;
+        for (int i = 0; i <numOfDices ; i++)
+        {
+            result = ThreadLocalRandom.current().nextInt(diceType);
+            //   System.out.println(i+1 + " roll result :" + result);
+            cumulatedResult+=result;
+        }
+        // System.out.println("cumulated damage is: " + cumulatedResult);
+        return cumulatedResult;
+    }
+}
