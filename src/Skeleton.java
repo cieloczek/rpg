@@ -12,8 +12,6 @@ public class Skeleton implements Creature {
         this.name = name;
         this.basicHealth = basicHealth;
         this.currentHealth = currentHealth;
-        this.defence = defence;
-        this.numOfAttacks = numOfAttacks;
     }
 
     @Override
@@ -65,7 +63,7 @@ public class Skeleton implements Creature {
             System.out.println("1. Attack \n2. Flee ");
             option = sc.nextInt();
         }
-         while (option==1 && option ==2 );
+         while (option<1 && option >2 );
             switch (option) {
                 case 1:
                     x = attack(sc);

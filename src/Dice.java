@@ -12,7 +12,7 @@ public class Dice {
         this.diceType = Integer.parseInt(temp[1]);
     }
     public int roll(){
-        int result = 0;
+        int result;
         int cumulatedResult = 0;
         for (int i = 0; i <numOfDices ; i++)
         {
