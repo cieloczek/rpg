@@ -2,7 +2,8 @@ import java.awt.*;
 import java.util.Scanner;
 
 public class Player {
-    Skeleton skeleton = new Skeleton("Test",100,100,10,1);
+//    Skeleton skeleton = new Skeleton("Test",100,100,10,1);
+    Skeleton skeleton = new Skeleton("testSkeleton",15,"2k10","3k20");
     private String name;
     private int score = 0;
     private Creature hero;
@@ -30,5 +31,10 @@ public class Player {
     }
     public int playerAction(Scanner sc){
         return hero.action(sc);
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 }
